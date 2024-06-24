@@ -1,2 +1,2 @@
 # softuni-exam
- Our SoftUni Exam Preparation
+ SoftUni Exam Preparation
