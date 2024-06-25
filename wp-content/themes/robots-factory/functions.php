@@ -10,8 +10,9 @@ if ( ! defined( 'ROBOTS_FACTORY_ASSETS_URL' ) ) {
     define('ROBOTS_FACTORY_ASSETS_URL', get_template_directory_uri() . '/assets/' );
 }
 
-// Add theme support title-tag
+// Generate a few support elements
 add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
 
 /** Function that enqueue all of the assets */
 function enqueue_robots_theme_assets() {
