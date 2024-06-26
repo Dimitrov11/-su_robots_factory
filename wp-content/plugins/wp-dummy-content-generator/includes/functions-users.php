@@ -5,17 +5,17 @@ function wp_dummy_content_generatorUsers(){
 
 function wp_dummy_content_generatorGenerateUsers($userRole='subscriber',$wp_dummy_content_generatorIsBio='off'){
     $wp_dummy_content_generatorFaker = Faker\Factory::create();
-    $wp_dummy_content_generatorFirstName = $wp_dummy_content_generatorFaker->firstName;
-    $wp_dummy_content_generatorLastName = $wp_dummy_content_generatorFaker->lastName;
-    $wp_dummy_content_generatorUserName = $wp_dummy_content_generatorFaker->userName;
-    $wp_dummy_content_generatorUserEmail = $wp_dummy_content_generatorFaker->freeEmail;
+    $wp_dummy_content_generatorFirstName = $wp_dummy_content_generatorFaker->firstName();
+    $wp_dummy_content_generatorLastName = $wp_dummy_content_generatorFaker->lastName();
+    $wp_dummy_content_generatorUserName = $wp_dummy_content_generatorFaker->userName();
+    $wp_dummy_content_generatorUserEmail = $wp_dummy_content_generatorFaker->safeEmail();
     $wp_dummy_content_generatorPassword = 'wp_dummy_content_generator';
     $user_id = wp_create_user( $wp_dummy_content_generatorUserName, $wp_dummy_content_generatorPassword, $wp_dummy_content_generatorUserEmail );
     update_user_meta($user_id,'wp_dummy_content_generator_user','true');
     update_user_meta($user_id,'first_name',$wp_dummy_content_generatorFirstName);
     update_user_meta($user_id,'last_name',$wp_dummy_content_generatorLastName);
     if($wp_dummy_content_generatorIsBio == 'on'){
-	    $wp_dummy_content_generatorUserBio = $wp_dummy_content_generatorFaker->text;
+	    $wp_dummy_content_generatorUserBio = $wp_dummy_content_generatorFaker->text();
 	    update_user_meta($user_id,'description',$wp_dummy_content_generatorUserBio);
     }
     if($userRole != 'subscriber'){

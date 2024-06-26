@@ -1,7 +1,7 @@
 === WP Dummy Content Generator ===
-Contributors: Deepak anand, tutsocean
+Contributors: 
 Donate link: 
-Tags: WP Dummy Content Generator, WordPress dummy content plugin, Dummy content generation for WordPress, Populating WordPress site with dummy content, Generate dummy posts and pages in WordPress, Deleting generated dummy content in WordPress, Customizable dummy content for WordPress, Efficient test data generation for WordPress, Simplifying dummy content management in WordPress, Streamlining website development with dummy content., WordPress dummy content
+Tags: WP Dummy Content Generator, WordPress dummy content plugin, Dummy content generation for WordPress, dummy posts and custom posts, woocommerce products
 Requires at least: 6.0
 Tested up to: 6.5
 Stable tag: trunk
@@ -9,17 +9,17 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The "WP Dummy Content Generator" plugin is particularly useful for developers, designers, and website administrators who want to quickly populate their WordPress site with realistic dummy content. It saves time and effort by automatically generating content that mimics real posts and pages, enabling you to focus on other aspects of website development or testing.
+Generate realistic dummy content for WordPress quickly. Ideal for developers and designers to populate sites for testing and development.
 
 == Description ==
 
-The "WP Dummy Content Generator" plugin is a powerful tool designed for WordPress websites. Its primary purpose is to generate dummy content, such as posts, pages, custom post types, and media files, to populate your website during development or testing phases.
+The "WP Dummy Content Generator" plugin is a powerful tool designed for WordPress websites. Its primary purpose is to generate dummy content, such as posts, custom post types, and media files, to populate your website during development or testing phases.
 
-This plugin offers a user-friendly interface that allows you to customize the type, quantity, and characteristics of the dummy content you want to generate. You can specify the number of posts or pages, assign categories or tags, and even include featured images.
+This plugin offers a user-friendly interface that allows you to customize the type, quantity, and characteristics of the dummy content you want to generate. You can specify the number of posts, assign categories or tags, and even include featured images.
 
 One of the notable features of this plugin is its ability to delete all the generated content with a single click. This makes it convenient to remove the dummy data once you no longer need it, ensuring a clean and streamlined website.
 
-The "WP Dummy Content Generator" plugin is particularly useful for developers, designers, and website administrators who want to quickly populate their WordPress site with realistic dummy content. It saves time and effort by automatically generating content that mimics real posts and pages, enabling you to focus on other aspects of website development or testing.
+The "WP Dummy Content Generator" plugin is particularly useful for developers, designers, and website administrators who want to quickly populate their WordPress site with realistic dummy content. It saves time and effort by automatically generating content that mimics real posts, enabling you to focus on other aspects of website development or testing.
 
 Overall, this plugin simplifies the process of creating and managing dummy content, providing a handy solution for efficiently populating your WordPress website with test data.
 
@@ -27,7 +27,7 @@ Overall, this plugin simplifies the process of creating and managing dummy conte
 
 The "WP Dummy Content Generator" plugin offers the following features and benefits:
 
-1) Dummy Content Generation: The plugin allows you to generate dummy content such as posts, pages, custom post types, and media files for your WordPress website.
+1) Dummy Content Generation: The plugin allows you to generate dummy content such as posts, custom post types, and media files for your WordPress website.
 
 2) Customization Options: You can customize the generated content by specifying the number of items to create, assigning categories or tags, including featured images, and adding custom fields.
 
@@ -37,7 +37,7 @@ The "WP Dummy Content Generator" plugin offers the following features and benefi
 
 5) Time-saving Solution: By automating the generation of dummy content, the plugin saves you valuable time and effort that would otherwise be spent manually creating test content.
 
-6) Realistic Dummy Data: The generated content closely mimics real posts and pages, providing a more authentic representation of how your website will look and function with actual content.
+6) Realistic Dummy Data: The generated content closely mimics real posts, providing a more authentic representation of how your website will look and function with actual content.
 
 7) Testing and Development: The plugin is particularly useful during website testing and development stages, as it helps populate your site with realistic test data for a more accurate evaluation of design, functionality, and performance.
 
@@ -123,4 +123,6 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 3.3.1 - Fixed the fetal error.
 3.4.0 - Made it compatible 7.4 to 8.3 php version.
 3.4.1 - Removed unwanted vendors.
+3.4.2 - Removed composer error for php version dependency.
+3.4.3 - Fixed user data generation issue for firstname and last name.
 == Upgrade Notice ==
