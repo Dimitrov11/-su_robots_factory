@@ -16,3 +16,18 @@
  * Domain Path:       /languages
  */
 
+if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_ASSETS_DIR' )) {
+    define( 'ROBOTS_FACTORY_PLUGIN_ASSETS_DIR', plugins_url( 'assets', __FILE__ ) );
+}
+
+if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_DIR' )) {
+    define( 'ROBOTS_FACTORY_PLUGIN_DIR', plugin_dir_path( __FILE__ ) . 'includes' );
+}
+
+if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_DIR' )) {
+    define( 'ROBOTS_FACTORY_PLUGIN_DIR', plugin_dir_path( __FILE__ ) . 'includes' );
+}
+
+// Load important files
+require ROBOTS_FACTORY_PLUGIN_DIR . '/functions.php';
+require ROBOTS_FACTORY_PLUGIN_DIR . '/class-robots.php';
