@@ -7,11 +7,14 @@
 <?php 
     $robots_homepage_post_per_page = get_option( 'robots_homepage_post_per_page' );
 
+    // ACF
+    $test_field = get_field( 'test_field', get_the_ID() );
+    var_dump( $test_field );
+    var_dump( get_post_meta( get_the_ID(), 'test_field', true ) );
+
     if ( empty($robots_homepage_post_per_page) ) {
         $robots_homepage_post_per_page = 3;
     }
-
-    var_dump( $robots_homepage_post_per_page );
 
     $robots_args = array(
         'post_type'     => 'robot',
