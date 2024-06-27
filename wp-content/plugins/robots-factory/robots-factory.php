@@ -20,8 +20,8 @@ if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_ASSETS_DIR' )) {
     define( 'ROBOTS_FACTORY_PLUGIN_ASSETS_DIR', plugins_url( 'assets', __FILE__ ) );
 }
 
-if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_DIR' )) {
-    define( 'ROBOTS_FACTORY_PLUGIN_DIR', plugin_dir_path( __FILE__ ) . 'includes' );
+if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_INCLUDES_DIR' )) {
+    define( 'ROBOTS_FACTORY_PLUGIN_INCLUDES_DIR', plugin_dir_path( __FILE__ ) . 'includes' );
 }
 
 if ( ! defined( 'ROBOTS_FACTORY_PLUGIN_DIR' )) {

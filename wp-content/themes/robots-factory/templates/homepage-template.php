@@ -2,11 +2,21 @@
     // Template Name: Homepage
 ?>
 
-<?php
+<?php get_header(); ?>
+
+<?php 
+    $robots_homepage_post_per_page = get_option( 'robots_homepage_post_per_page' );
+
+    if ( empty($robots_homepage_post_per_page) ) {
+        $robots_homepage_post_per_page = 3;
+    }
+
+    var_dump( $robots_homepage_post_per_page );
+
     $robots_args = array(
         'post_type'     => 'robot',
         'post_status'   => 'publish',
-        'post_per_page' => 3,
+        'post_per_page' => $robots_homepage_post_per_page,
         'meta_query'    => array(
             array(
                 'key'     => 'featured',
@@ -20,8 +30,6 @@ $robots_query = new WP_Query( $robots_args );
 
 ?>
 
-<?php get_header(); ?>
-
     <!-- Product -->
         <section id="product" class="product">
             <div class="container section-bg">
@@ -33,14 +41,22 @@ $robots_query = new WP_Query( $robots_args );
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="porduct-box">
-                            <img class="img-responsive" src="<?php echo ROBOTS_FACTORY_ASSETS_URL; ?>images/product-1.jpg" alt="product">
-                            <h3 class="product-title">Space robot</h3>
-                        </div>
+
+                <?php if ( $robots_query->have_posts() ) : ?>
+                    <div class="row">
+                    
+                        <?php while( $robots_query->have_posts() ) : $robots_query->the_post(); ?>
+                            <div class="col-sm-4">
+                                <div class="porduct-box">
+                                    <img class="img-responsive" src="<?php echo ROBOTS_FACTORY_ASSETS_URL; ?>images/product-1.jpg" alt="product">
+                                    <h3 class="product-title"><?php the_title(); ?></h3>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+
                     </div>
-                </div>
+                <?php endif; ?>
+
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="classic-title">
