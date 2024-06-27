@@ -24,7 +24,7 @@ function robots_like_button() {
         return;
     }
 
-    $post_id = esc_attr( $_POST['$post_id'] );
+    $post_id = esc_attr( $_POST['post_id'] );
 
     $likes_number = get_post_meta( $post_id, 'likes', true );
 
